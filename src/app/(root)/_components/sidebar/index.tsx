@@ -4,14 +4,9 @@ import { navItems } from "@/constants/nav-items";
 import Image from "next/image";
 import Link from "next/link";
 import SidebarItem from "./sidebar-item";
-import {
-	SignIn,
-	SignInButton,
-	SignedIn,
-	SignedOut,
-	UserButton,
-} from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
+import { UserRoundSearch } from "lucide-react";
 
 function Sidebar() {
 	return (
@@ -27,13 +22,13 @@ function Sidebar() {
 
 			<nav className="flex flex-col justify-between flex-1">
 				<SignedIn>
-					<ul className="flex flex-col gap-2">
+					<ul className="flex flex-col gap-1">
 						{navItems.slice(0, 6).map((navItem) => (
 							<SidebarItem key={navItem.route} item={navItem} />
 						))}
 					</ul>
 
-					<ul className="flex flex-col justify-between gap-2">
+					<ul className="flex flex-col justify-between gap-1">
 						{navItems.slice(6).map((navItem) => (
 							<SidebarItem key={navItem.route} item={navItem} />
 						))}

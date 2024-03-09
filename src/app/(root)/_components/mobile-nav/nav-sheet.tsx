@@ -4,9 +4,7 @@ import SidebarItem from "../sidebar/sidebar-item";
 
 import {
 	Sheet,
-	SheetClose,
 	SheetContent,
-	SheetFooter,
 	SheetHeader,
 	SheetTitle,
 	SheetTrigger,
